@@ -1,0 +1,216 @@
+@charset "utf-8";
+
+/*web none*/
+.mPanel,.mCon03Menu04,.mMainCon04{display:none;}
+
+/*아래의 미디어태그안에 적어야 반응형으로 적용되는것*/
+@media screen and (max-width:768px){
+    /*mobile setting*/
+    body{min-width:auto;}
+    .inner{
+        width:auto;
+        margin:0;
+    }
+    
+    /*mobile none*/
+    .gnb,.util,.mainCon02,.con03Menu04,.mainCon04,.con05List li p,.fLogo,.fInfo{display:none;}
+    
+    /*mobile block*/
+    .mPanel,.mCon03Menu04,.mMainCon04{display:block;}/*모바일에서만 보여야 하는것은 이렇게 작업*/
+    
+    /*백그라운드사이즈변경*/
+    /*모바일은 2배 사이즈로 작업을 하지만(720*1280) 퍼블리싱 할때엔 원래사이즈로 바꾸어야 하기때문에, sp이미지를 절반크기로 줄여주어야 한다(800*800 > 400*400)*/
+    #header h1,.mPanel,.sliderBtn,.con01List li span{background-size:400px !important;}
+    
+    /*header*/
+    #header{
+        height:auto;
+        margin:10px 20px;
+    }
+    #header h1{
+        width:70px;
+        height:28px;
+        background-position:0 0;
+        position:static;
+    }
+    .mPanel{
+        width:16px;
+        height:16px;
+        background:url(../images/sp_com.png) no-repeat -227px -97px;
+        text-indent:-9999px;
+        position:absolute;
+        top:6px;
+        right:0;
+    }
+    .mPanel a{
+        height:100%;
+        display:block;
+    }
+    
+    /*mainSlier*/
+    .mainSlider{
+        margin:0;
+        height:auto;
+        padding:45% 0;
+    }
+    .sliderTxt{padding-top:0;}
+    .sliderTxt h2{
+        font-size:14px;
+        font-family:'Noto Sans',sans-serif;
+        font-weight:bold;
+    }
+    .sliderTxt p{font-size:11px;}
+    
+    .sliderBtn{
+        width:13px;
+        height:23px;
+        background-position:-64px -30px;
+        margin-top:-12px;
+    }
+    .prevBtn{left:10px;}
+    .nextBtn{
+        right:10px;
+        background-position:-79px -30px;
+    }
+    
+    /*mainCon01*/
+    .mainCon01{margin:20px 0;}
+    .con01List{
+        display:block;
+        overflow:hidden;
+    }
+    .con01List li{
+        width:33.33%;
+        margin:0;
+        padding:10px 0;
+    }
+    .con01List li span{
+        width:33px;
+        height:33px;
+        margin:0 auto;
+    }
+    .con01Icon01{background-position:-1px -57px;}
+    .con01Icon02{background-position:-37px -57px;}
+    .con01Icon03{background-position:-74px -55px;}
+    .con01Icon04{background-position:-109px -57px;}
+    .con01Icon05{background-position:-145px -57px;}
+    .con01Icon06{background-position:-181px -57px;}
+    /*con01hover*/
+    .con01List li:hover span,.con01List li:hover .con01Icon06{background-position-y:-57px;}
+    .con01List li:hover .con01Icon03{background-position-y:-55px;}
+    .con01List li:hover p{color:#333;}
+    
+    /*mainCon03*/
+    .mainCon03{padding:0 10px;}
+    .con03Grid{
+        width:calc(50% - 5px);
+        height:auto;
+        margin-right:0;
+        position:relative;
+        margin-right:10px;
+        margin-bottom:10px;
+    }
+    .con03Grid:nth-child(2n){margin-right:0;}
+    .con03Grid::after{
+        content:"";
+        display:block;
+        padding-bottom:100%;
+    }
+    .con03Grid a{
+        width:100%;
+        position:absolute;
+    }
+    .con03Grid h3{
+        width:100%;
+        padding-top:0;
+        margin-bottom:0;
+        position:absolute;
+        top:50%;
+        /*가변일때에 세로중앙정렬=트랜스레이트로 -50%주기(자기자신이 기준이기 때문에)*/
+        transform:translate(0,-50%);
+        font-size:15px;
+        font-weight:400;
+    }
+    /*con03hover*/
+    .con03Grid a:hover p{display:none;}
+    .con03Grid a:hover{background-color:rgba(45,91,121,0);}
+    
+    /*mMainCon04*/
+    .mMainCon04 dl{
+        background:#f2f0ed;
+        height:45px;
+        line-height:45px;
+        margin-bottom:10px;
+        font-size:13px;
+        margin:0 10px 10px 10px;
+    }
+    .mMainCon04 dt{
+        width:20%;
+        display:inline-block;
+        text-align:center;
+        vertical-align:middle;
+        font-weight:bold;
+        color:#2d5b79;
+    }
+    .mMainCon04 dd{
+        width:70%;
+        display:inline-block;
+        vertical-align:middle;
+    }
+    .mMainCon04 dd a{
+        display:block;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+    
+    /*mainCon05*/
+    .mainCon05{padding:20px 10px 10px;}
+    .con05List li{
+        width:calc(50% - 5px);
+        height:auto;
+        background-size:100% 100%;
+        margin-right:10px;
+        margin-bottom:10px;
+    }
+    .con05List li:nth-child(2n){margin-right:0;}
+    .con05List li h3{
+        padding:70% 0 20% 0;
+        font-size:15px;
+    }
+    
+    /*footer*/
+    #footer{text-align:center;}
+    .fMenu{
+        width:100%;
+        line-height:30px;
+    }
+    .fMenu li{
+        display:inline-block;
+        float:none;
+    }
+    .fMenu li:first-child::before{display:none;}
+    
+    .csFamily{width:100%;}
+    .csFamily>div{
+        box-sizing:border-box;
+        float:none;
+        display:inline-block;
+    }
+    .csBox{width:50%;}
+    .csBox .num{
+        font-size:13px;
+        margin-top:0;
+    }
+    .familyBox{
+        width:35%;
+        text-align:left;
+        font-size:12px;
+    }
+    .fBottom{padding:5% 0;}
+}
+
+/*아이폰5에서 푸터정렬 틀어짐*/
+@media screen and (max-width:768px){
+    #footer{letter-spacing:-1px;}
+}

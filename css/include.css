@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/*헤더*/
+#header{
+    height:43px;
+    line-height:43px;
+    margin:20px 50px;
+    text-align:center;
+    position:relative;
+}
+
+#header h1{
+    width:110px;
+    height:43px;
+    position:absolute;
+    background:url(../images/sp_com.png) no-repeat -300px -5px;
+    text-indent:-9999px;
+}
+#header h1 a{display:block;}
+
+.gnb{display:inline-block;}
+.gnb li{
+    float:left;
+    margin:0 30px;
+}
+.gnb li a{display:block;}
+.gnb li:hover a{
+    border-bottom:3px solid #2d5b79;
+    color:#2d5b79;
+}
+
+.util{
+    position:absolute;
+    top:0;
+    right:0;
+    font-size:12px;
+}
+.util li{float:left;}
+.util li::after{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:8px;
+    background:#999;
+    margin:0 5px;
+}
+.util li:last-child::after{display:none;}
+
+/*푸터*/
+#footer{
+    color:#fff;
+    font-size:13px;
+}
+#footer a{color:#fff;}
+
+.fTop{
+    background:#383f43;
+    line-height:40px;
+    padding:10px 0;
+}
+.fMenu,.fMenu li{float:left;}
+.fMenu li::before,.fInfo span::after{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:10px;
+    background:#999;
+    margin:0 5px;
+}
+.fMenu li a{color:#fff;}
+.lineNone li:first-child::before{display:none;}
+
+.csFamily{float:right;}
+.csFamily>div{
+    height:40px;
+    float:left;
+    padding:0 15px;
+}
+.csBox{background:#2a3033;}
+.csBox span{
+    display:inline-block;
+    vertical-align:top;
+}
+.csBox .num{
+    font-size:22px;
+    margin-top:-1px;
+    margin-left:10px;
+}
+.familyBox{
+    width:150px;
+    background:#fff url(../images/arrow.png) no-repeat 95% center;
+    color:#333;
+    margin-left:10px;
+}
+
+.fBottom{
+    background:#4c5459;
+    text-align:center;
+    padding:70px 0;
+    
+}
+.fBottom p{margin:10px 0;}
+.fLogo{
+    width:130px;
+    height:50px;
+    background:url(../images/sp_com.png) no-repeat -150px 0;
+    text-indent:-9999px;
+    margin:0 auto 20px;
+}
+.fInfo{font-size:0;}
+.fInfo span{font-size:13px;}
+.fInfo span:last-child::after{display:none;}
